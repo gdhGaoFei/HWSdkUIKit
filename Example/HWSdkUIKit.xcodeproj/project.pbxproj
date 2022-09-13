@@ -523,6 +523,7 @@
 			baseConfigurationReference = 9AFC7E08DAF8161382A4721A /* Pods-HWSdkUIKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HWSdkUIKit/HWSdkUIKit-Prefix.pch";
 				INFOPLIST_FILE = "HWSdkUIKit/HWSdkUIKit-Info.plist";
@@ -539,6 +540,7 @@
 			baseConfigurationReference = 66C5AFA01CF41E1825C0D0EC /* Pods-HWSdkUIKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HWSdkUIKit/HWSdkUIKit-Prefix.pch";
 				INFOPLIST_FILE = "HWSdkUIKit/HWSdkUIKit-Info.plist";
