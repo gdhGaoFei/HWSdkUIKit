@@ -10,11 +10,16 @@
 
 @implementation HWSdkUIKitUtil
 
-+ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName {
+/// 获取文件的路径
++ (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
+    return [HWSdkUIKitUtil filePathForResource:name ofType:@"png" fwName:fwName resourceClass:[self class]];
+}
+/// 获取文件的路径
++ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
     if (kHWSdkNullString(name)) {
         return @"";
     }
-    NSBundle * cbundle = [NSBundle bundleForClass:[self class]];
+    NSBundle * cbundle = [NSBundle bundleForClass:resourceClass];
     NSURL * pathURL = [cbundle URLForResource:fwName withExtension:@"bundle"];
     if (pathURL == nil) {
         if (kHWSdkNullString(ext)) {
@@ -30,6 +35,10 @@
         dataPath = [bundle pathForResource:name ofType:ext];
     }
     return dataPath;
+}
+
++ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName {
+    return [HWSdkUIKitUtil filePathForResource:name ofType:ext fwName:fwName resourceClass:[self class]];
 }
 
 /// 获取文件的路径
