@@ -1,0 +1,47 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'HWSdkUIKit_Example' do
+  pod 'HWSdkUIKit', :path => '../'
+  
+  #公用pods
+
+  # ==== 自动布局 =====
+  pod 'Masonry' , '1.1.0'
+
+  # ===== Model解析工具 ======
+  # pod 'MJExtension', '3.4.1'
+
+  # ===== HUD
+  pod 'MBProgressHUD', '1.2.0'
+
+  # ===== RAC
+  pod 'ReactiveObjC', '3.1.1'
+
+  # ===== 刷新控件
+  pod 'MJRefresh', '3.7.5'
+
+  # ===== 键盘管理
+  #pod 'IQKeyboardManager', '6.5.9'
+
+  # ===== YYKit
+  #pod 'YYKit', '1.0.9'
+  ## YYImage
+  #pod 'YYImage' , '1.0.4'
+  ## YYKit 的一套分类
+  pod 'YYCategories' , '1.0.4'
+
+  # ===== SDWebImage
+  #pod 'SDWebImage', '5.12.1'
+
+  # ===== 网络请求
+  ##pod 'AFNetworking', '3.1.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
+  #pod 'AFNetworking', '4.0.1'
+
+  target 'HWSdkUIKit_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end

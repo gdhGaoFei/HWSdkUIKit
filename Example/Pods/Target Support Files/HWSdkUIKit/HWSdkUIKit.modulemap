@@ -1,0 +1,6 @@
+framework module HWSdkUIKit {
+  umbrella header "HWSdkUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

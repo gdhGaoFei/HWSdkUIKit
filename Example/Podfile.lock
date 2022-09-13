@@ -1,0 +1,54 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HWSdkUIKit (0.1.0):
+    - Masonry (= 1.1.0)
+    - MBProgressHUD (= 1.2.0)
+    - MJRefresh (= 3.7.5)
+    - ReactiveObjC (= 3.1.1)
+    - YYCategories (= 1.0.4)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
+  - ReactiveObjC (3.1.1)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - HWSdkUIKit (from `../`)
+  - Masonry
+  - MBProgressHUD (= 1.2.0)
+  - MJRefresh (= 3.7.5)
+  - ReactiveObjC (= 3.1.1)
+  - YYCategories (= 1.0.4)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - ReactiveObjC
+    - YYCategories
+
+EXTERNAL SOURCES:
+  HWSdkUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HWSdkUIKit: 66941f3c3e0e993fbb6aa63e7879e7fdf5fd521a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: dfd71dc0b9ae69f8fdc23d059c32a930801fcbb4
+
+COCOAPODS: 1.11.3
