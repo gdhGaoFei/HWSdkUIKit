@@ -3,27 +3,23 @@
   "version": "0.1.0",
   "summary": "A short description of HWSdkUIKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/gdhgaofei@163.com/HWSdkUIKit",
+  "homepage": "https://github.com/gdhGaoFei/HWSdkUIKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "gdhgaofei@163.com": "gdhgaofei@163.com"
+    "华&梅": "gdhgaofei@163.com"
   },
   "source": {
-    "git": "https://github.com/gdhgaofei@163.com/HWSdkUIKit.git",
+    "git": "https://github.com/gdhGaoFei/HWSdkUIKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "HWSdkUIKit/Classes/**/*",
-  "resource_bundles": {
-    "HWSdkUIKit": [
-      "HWSdkUIKit/Assets/*.*"
-    ]
-  },
+  "resources": "HWSdkUIKit/**/*.bundle",
   "public_header_files": "Pod/Classes/**/*.h",
   "dependencies": {
     "Masonry": [

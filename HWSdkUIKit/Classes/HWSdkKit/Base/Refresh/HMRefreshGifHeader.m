@@ -31,6 +31,7 @@
 /// 初始化
 - (void)prepare {
     [super prepare];
+    [HWSdkUIKitUtil filePathForResource:@"metting_more_icon" ofType:@"png"];
     //1.找到gif文件路径  loading 图片 loading_refresh
 //    NSBundle * cbundle = [NSBundle bundleForClass:[self class]];
 //    NSString * path = [cbundle pathForResource:@"HWSdkUIKit" ofType:@"bundle"];

@@ -15,16 +15,17 @@
         return @"";
     }
     NSBundle * cbundle = [NSBundle bundleForClass:[self class]];
-    NSString * path = [cbundle pathForResource:fwName ofType:@"bundle"];
-    if (kHWSdkNullString(path)) {
+    NSURL * pathURL = [cbundle URLForResource:fwName withExtension:@"bundle"];
+    if (pathURL == nil) {
         if (kHWSdkNullString(ext)) {
             return name;
         }
         return [name stringByAppendingFormat:@".%@",ext];
     }
-    NSBundle * bundle = [NSBundle bundleWithPath:path];
+    NSBundle * bundle = [NSBundle bundleWithURL:pathURL];
     /// 使用系统的倍图 @2x/@3x 如果没有直接取
-    NSString * dataPath = [bundle pathForResource:[name stringByAppendingFormat:@"@%0.fx",[UIScreen mainScreen].scale] ofType:ext];
+    NSString * namePath = [name stringByAppendingFormat:@"@%0.fx",[UIScreen mainScreen].scale];
+    NSString * dataPath = [bundle pathForResource:[namePath stringByAppendingFormat:@"@%0.fx",[UIScreen mainScreen].scale] ofType:ext];
     if (kHWSdkNullString(dataPath)) {
         dataPath = [bundle pathForResource:name ofType:ext];
     }
