@@ -7,7 +7,7 @@
 //
 
 #import "HMBaseViewController.h"
-#import "HWSdkKitHeader.h"
+#import "HWSdkUIKitHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

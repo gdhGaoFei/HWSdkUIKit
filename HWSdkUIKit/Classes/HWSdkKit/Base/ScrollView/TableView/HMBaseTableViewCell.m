@@ -7,7 +7,7 @@
 //
 
 #import "HMBaseTableViewCell.h"
-#import "HWSdkKitHeader.h"
+#import "HWSdkUIKitHeader.h"
 
 @implementation HMBaseTableViewCell
 

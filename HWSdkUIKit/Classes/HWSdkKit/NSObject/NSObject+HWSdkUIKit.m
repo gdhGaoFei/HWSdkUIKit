@@ -1,13 +1,13 @@
 //
-//  NSObject+HWSdkKit.m
-//  HWSdkKitDemo
+//  NSObject+HWSdkUIKit.m
+//  HWSdkUIKitDemo
 //
 //  Created by 华&梅 on 2022/9/9.
 //
 
-#import "NSObject+HWSdkKit.h"
+#import "NSObject+HWSdkUIKit.h"
 
-@implementation NSObject (HWSdkKit)
+@implementation NSObject (HWSdkUIKit)
 
 //MARK: - ==== 查找Window/Nav/ViewController
 - (UINavigationController *)findCurrentNavigationController{

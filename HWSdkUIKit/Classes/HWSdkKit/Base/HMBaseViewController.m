@@ -7,7 +7,7 @@
 //
 
 #import "HMBaseViewController.h"
-#import "NSObject+HWSdkKit.h"
+#import "NSObject+HWSdkUIKit.h"
 
 @interface HMBaseViewController ()
 

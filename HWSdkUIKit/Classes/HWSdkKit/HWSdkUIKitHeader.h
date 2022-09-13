@@ -1,12 +1,12 @@
 //
-//  HWSdkKitHeader.h
-//  HWSdkKit
+//  HWSdkUIKitHeader.h
+//  HWSdkUIKit
 //
 //  Created by 华&梅 on 2022/9/9.
 //
 
-#ifndef HWSdkKitHeader_h
-#define HWSdkKitHeader_h
+#ifndef HWSdkUIKitHeader_h
+#define HWSdkUIKitHeader_h
 
 #ifdef __OBJC__
 
@@ -253,4 +253,4 @@ static inline UIColor * _Nonnull kHWSdkColor_DarkModeStr(NSString * _Nullable li
 
 #endif
 
-#endif /* HWSdkKitHeader_h */
+#endif /* HWSdkUIKitHeader_h */

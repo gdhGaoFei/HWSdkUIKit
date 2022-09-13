@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 itcast. All rights reserved.
 //
 
-#import "MBProgressHUD+HWSdkKit.h"
+#import "MBProgressHUD+HWSdkUIKit.h"
 
-@implementation MBProgressHUD (HWSdkKit)
+@implementation MBProgressHUD (HWSdkUIKit)
 
 #pragma mark 显示信息
 + (MBProgressHUD *)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view afterDelay:(NSTimeInterval)delay {

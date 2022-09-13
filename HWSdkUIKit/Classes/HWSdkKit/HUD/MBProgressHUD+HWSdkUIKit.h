@@ -12,7 +12,7 @@
 #import "MBProgressHUD.h"
 #endif
 
-@interface MBProgressHUD (HWSdkKit)
+@interface MBProgressHUD (HWSdkUIKit)
 
 + (void)showMessage:(NSString *)message toView:(UIView *)view;
 + (void)showMessage:(NSString *)message toView:(UIView *)view afterDelay:(NSTimeInterval)delay;
