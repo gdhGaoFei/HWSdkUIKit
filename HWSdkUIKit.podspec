@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/gdhgaofei@163.com/HWSdkUIKit'
+  s.homepage         = 'https://github.com/gdhGaoFei/HWSdkUIKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'gdhgaofei@163.com' => 'gdhgaofei@163.com' }
-  s.source           = { :git => 'https://github.com/gdhgaofei@163.com/HWSdkUIKit.git', :tag => s.version.to_s }
+  s.author           = { '华&梅' => 'gdhgaofei@163.com' }
+  s.source           = { :git => 'https://github.com/gdhGaoFei/HWSdkUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
