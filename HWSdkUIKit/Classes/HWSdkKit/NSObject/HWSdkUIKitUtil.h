@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass;
 /// 获取文件的路径
 + (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass;
+/// 获取文件的路径
++ (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass inDirectory:(nullable NSString *)subpath;
+/// 获取文件的路径
++ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass inDirectory:(nullable NSString *)subpath;
 
 /// [UIUtilManager imageNamed: 创建图片
 + (UIImage *)imageNamed:(NSString * _Nullable)name;

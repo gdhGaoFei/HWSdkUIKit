@@ -9,13 +9,13 @@
 #import "HWSdkUIKitHeader.h"
 
 @implementation HWSdkUIKitUtil
+/// 获取文件的路径
++ (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass inDirectory:(nullable NSString *)subpath {
+    return [HWSdkUIKitUtil filePathForResource:name ofType:@"png" fwName:fwName resourceClass:resourceClass inDirectory:subpath];
+}
 
 /// 获取文件的路径
-+ (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
-    return [HWSdkUIKitUtil filePathForResource:name ofType:@"png" fwName:fwName resourceClass:resourceClass];
-}
-/// 获取文件的路径
-+ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
++ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass inDirectory:(nullable NSString *)subpath {
     if (kHWSdkNullString(name)) {
         return @"";
     }
@@ -30,11 +30,27 @@
     NSBundle * bundle = [NSBundle bundleWithURL:pathURL];
     /// 使用系统的倍图 @2x/@3x 如果没有直接取
     NSString * namePath = [name stringByAppendingFormat:@"@%0.fx",[UIScreen mainScreen].scale];
-    NSString * dataPath = [bundle pathForResource:namePath ofType:ext];
+    NSString * dataPath = [bundle pathForResource:namePath ofType:ext inDirectory:subpath];
+    if (kHWSdkNullString(subpath)) {
+        dataPath = [bundle pathForResource:namePath ofType:ext];
+    }
     if (kHWSdkNullString(dataPath)) {
-        dataPath = [bundle pathForResource:name ofType:ext];
+        dataPath = [bundle pathForResource:name ofType:ext inDirectory:subpath];
+        if (kHWSdkNullString(subpath)) {
+            dataPath = [bundle pathForResource:namePath ofType:ext];
+        }
     }
     return dataPath;
+}
+
+/// 获取文件的路径
++ (NSString *)filePNGPathForResource:(NSString * _Nullable)name fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
+    return [HWSdkUIKitUtil filePathForResource:name ofType:@"png" fwName:fwName resourceClass:resourceClass];
+}
+
+/// 获取文件的路径
++ (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName resourceClass:(Class _Nullable)resourceClass {
+    return [HWSdkUIKitUtil filePathForResource:name ofType:ext fwName:fwName resourceClass:resourceClass inDirectory:@""];
 }
 
 + (NSString *)filePathForResource:(NSString * _Nullable)name ofType:(NSString * _Nullable)ext fwName:(NSString * _Nullable)fwName {
