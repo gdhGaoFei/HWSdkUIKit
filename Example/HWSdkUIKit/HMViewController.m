@@ -14,10 +14,24 @@
 
 @implementation HMViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
+    self.view.backgroundColor = kHWSdkColor_RandomColor();
+    self.dataSource = @[@"数据", @"数据1", @"数据2", @"数据3", ];
+    
+    [self addRefreshHeader:^{
+        NSLog(@"======");
+    }];
+    [self addRefreshFooter:^{
+        NSLog(@"^^^^^^^^");
+    }];
+}
+
+- (HMBaseTableViewCell *)tableView:(UITableView *)tableView dequeueReusableCell:(NSString *)identifier indexPath:(NSIndexPath *)indexPath {
+    HMBaseTableViewCell * cell = [HMBaseTableViewCell initCellWithTv:tableView];
+    cell.textLabel.text = self.dataSource[indexPath.row];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning

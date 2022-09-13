@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'HWSdkUIKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'HWSdkUIKit' => ['HWSdkUIKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'HWSdkUIKit' => ['HWSdkUIKit/Assets/*.*']
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency "Masonry", "1.1.0"
   s.dependency "MBProgressHUD", "1.2.0"

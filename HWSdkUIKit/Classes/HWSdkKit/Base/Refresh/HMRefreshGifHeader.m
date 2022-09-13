@@ -7,6 +7,7 @@
 //
 
 #import "HMRefreshGifHeader.h"
+#import "HWSdkUIKit.h"
 
 @interface HMRefreshGifHeader ()
 {
@@ -31,26 +32,31 @@
 - (void)prepare {
     [super prepare];
     //1.找到gif文件路径  loading 图片 loading_refresh
-    NSString * dataPath = [[NSBundle mainBundle] pathForResource:@"loading_refresh" ofType:@"gif"];
+//    NSBundle * cbundle = [NSBundle bundleForClass:[self class]];
+//    NSString * path = [cbundle pathForResource:@"HWSdkUIKit" ofType:@"bundle"];
+//    NSBundle * bundle = [NSBundle bundleWithPath:path];
+    NSString * dataPath = [HWSdkUIKitUtil filePathForResource:@"loading_refresh" ofType:@"gif"];
     //NSData * data = [NSData dataWithContentsOfFile:dataPath];
     //UIImage * images = [UIImage sd_imageWithGIFData:data];
     //self.gifView.image = images;
-    
-    //2.获取gif文件数据
-    CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)[NSURL fileURLWithPath:dataPath], NULL);
-    //3.获取gif文件中图片的个数
-    size_t count = CGImageSourceGetCount(source);
         
     //5.定义一个可变数组存放所有图片
     NSMutableArray * imageArray = [[NSMutableArray alloc] init];
-     
-    //遍历gif
-    for (size_t i = 0; i<count; i++) {
-        CGImageRef image = CGImageSourceCreateImageAtIndex(source, i, NULL);
-        UIImage * imageName = [UIImage imageWithCGImage:image];
-        [imageArray addObject:imageName];//存image
-        CGImageRelease(image);
+    
+    if (!kHWSdkNullString(dataPath)) {
+        //2.获取gif文件数据
+        CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)[NSURL fileURLWithPath:dataPath], NULL);
+        //3.获取gif文件中图片的个数
+        size_t count = CGImageSourceGetCount(source);
+        //遍历gif
+        for (size_t i = 0; i<count; i++) {
+            CGImageRef image = CGImageSourceCreateImageAtIndex(source, i, NULL);
+            UIImage * imageName = [UIImage imageWithCGImage:image];
+            [imageArray addObject:imageName];//存image
+            CGImageRelease(image);
+        }
     }
+    
     if (imageArray.count > 0) {
         self.gifView.animationImages = [imageArray copy];
         self.gifView.animationDuration = 1.5;

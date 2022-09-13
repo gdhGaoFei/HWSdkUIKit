@@ -21,7 +21,7 @@ PODS:
 DEPENDENCIES:
   - FBSnapshotTestCase
   - HWSdkUIKit (from `../`)
-  - Masonry
+  - Masonry (= 1.1.0)
   - MBProgressHUD (= 1.2.0)
   - MJRefresh (= 3.7.5)
   - ReactiveObjC (= 3.1.1)
@@ -42,13 +42,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  HWSdkUIKit: 66941f3c3e0e993fbb6aa63e7879e7fdf5fd521a
+  HWSdkUIKit: cad3ce1e29b4e5e61fcea58c1ce277c81ad9da4f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: dfd71dc0b9ae69f8fdc23d059c32a930801fcbb4
+PODFILE CHECKSUM: b69a9fce8c940d93a43d79a03a784323236dafa9
 
 COCOAPODS: 1.11.3

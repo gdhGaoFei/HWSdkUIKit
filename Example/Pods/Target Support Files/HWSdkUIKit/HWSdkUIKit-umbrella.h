@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "HWSdkUIKit.h"
 #import "HMBaseViewController.h"
 #import "HMRefreshGifFooter.h"
 #import "HMRefreshGifHeader.h"
@@ -19,7 +18,9 @@
 #import "HMBaseTableViewController.h"
 #import "MBProgressHUD+HWSdkUIKit.h"
 #import "HWSdkUIKitHeader.h"
+#import "HWSdkUIKitUtil.h"
 #import "NSObject+HWSdkUIKit.h"
+#import "HWSdkUIKit.h"
 
 FOUNDATION_EXPORT double HWSdkUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char HWSdkUIKitVersionString[];

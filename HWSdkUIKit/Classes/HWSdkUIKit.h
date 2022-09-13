@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char HWSdkUIKitVersionString[];
 // YYCategories-umbrella
 #if __has_include(<HWSdkUIKit/HWSdkUIKit.h>)
 #import <HWSdkUIKit/HWSdkUIKitHeader.h>
+#import <HWSdkUIKit/HWSdkUIKitUtil.h>
 #import <HWSdkUIKit/MBProgressHUD+HWSdkUIKit.h>// 弹窗相关
 #import <HWSdkUIKit/NSObject+HWSdkUIKit.h>// 查找视图控制器
 #import <HWSdkUIKit/HMBaseViewController.h>
@@ -28,6 +29,7 @@ FOUNDATION_EXPORT const unsigned char HWSdkUIKitVersionString[];
 #import <HWSdkUIKit/HMRefreshGifFooter.h>
 #else
 #import "HWSdkUIKitHeader.h"
+#import "HWSdkUIKitUtil.h"
 #import "MBProgressHUD+HWSdkUIKit.h"// 弹窗相关
 #import "NSObject+HWSdkUIKit.h"// 查找视图控制器
 #import "HMBaseViewController.h"

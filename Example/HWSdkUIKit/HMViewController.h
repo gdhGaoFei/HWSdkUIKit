@@ -7,7 +7,12 @@
 //
 
 @import UIKit;
+#if __has_include(<HWSdkUIKit/HWSdkUIKit-umbrella.h>)
+#import <HWSdkUIKit/HWSdkUIKit-umbrella.h>
+#else
+#import "HWSdkUIKit.h"
+#endif
 
-@interface HMViewController : UIViewController
+@interface HMViewController : HMBaseTableViewController
 
 @end
