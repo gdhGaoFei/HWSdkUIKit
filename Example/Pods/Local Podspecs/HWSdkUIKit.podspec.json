@@ -20,7 +20,7 @@
   },
   "source_files": "HWSdkUIKit/Classes/**/*",
   "resources": "HWSdkUIKit/**/*.bundle",
-  "public_header_files": "Pod/Classes/**/*.h",
+  "public_header_files": "HWSdkUIKit/**/*.h",
   "dependencies": {
     "Masonry": [
       "1.1.0"
