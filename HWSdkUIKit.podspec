@@ -35,7 +35,8 @@ TODO: Add long description of the pod here.
 #  s.resource_bundles = {
 #    'HWSdkUIKit' => ['HWSdkUIKit/Assets/*.bundle']
 #  }
-  s.resource = "HWSdkUIKit/HWSdkUIKit.bundle"
+#  s.resource = "HWSdkUIKit.bundle"
+  s.resource = 'HWSdkUIKit/**/*.bundle'
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
