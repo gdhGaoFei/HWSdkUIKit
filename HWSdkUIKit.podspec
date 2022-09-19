@@ -29,7 +29,10 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
+  
+  # mach-o 是否是静态库
+  s.static_framework = true
+    
   s.source_files = 'HWSdkUIKit/Classes/**/*'
   
 #  s.resource_bundles = {

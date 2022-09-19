@@ -20,11 +20,14 @@
     self.view.backgroundColor = kHWSdkColor_RandomColor();
     self.dataSource = @[@"数据", @"数据1", @"数据2", @"数据3", ];
     
-    [self addRefreshHeader:^{
+//    [self addRefreshHeader:^{
+//        NSLog(@"======");
+//    }];
+//    [self addRefreshFooter:^{
+//        NSLog(@"^^^^^^^^");
+//    }];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         NSLog(@"======");
-    }];
-    [self addRefreshFooter:^{
-        NSLog(@"^^^^^^^^");
     }];
 }
 
