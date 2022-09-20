@@ -6,7 +6,7 @@
 //
 
 #import "HWSdkUIKitUtil.h"
-#import "HWSdkUIKitHeader.h"
+#import "HWSdkMacro.h"
 
 @implementation HWSdkUIKitUtil
 /// 获取文件的路径

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HWSdkUIKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of HWSdkUIKit.'
 
 # This description is used to generate tags and improve search results.
@@ -48,4 +48,39 @@ TODO: Add long description of the pod here.
   s.dependency "ReactiveObjC", "3.1.1"
   s.dependency "MJRefresh", "3.7.5"
   s.dependency "YYCategories", "1.0.4"
+  
+  
+  # 进行分 文件夹展示
+  # Macro
+  s.subspec 'Macro' do |ss|
+    ss.source_files = 'HWSdkUIKit/Classes/Macro/**/*.h'
+    #ss.dependency 'HWSdkUIKit/Classes/HWSdkKit/HWSdkMacro.h'
+  end
+  
+  # Common
+  s.subspec 'Common' do |ss|
+    ss.source_files = 'HWSdkUIKit/Classes/Common/**/*.{h,m}'
+    #ss.dependency 'HWSdkUIKit/Classes/HWSdkKit/HWSdkMacro.h'
+  end
+  
+  # HUD
+  s.subspec 'HUD' do |ss|
+    ss.source_files = 'HWSdkUIKit/Classes/HUD/**/*.{h,m}'
+    s.dependency "MBProgressHUD", "1.2.0"
+  end
+  
+  # HWSdkKit
+  s.subspec 'HWSdkKit' do |ss|
+    ss.source_files = 'HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}'
+    #s.dependency "MBProgressHUD", "1.2.0"
+  end
+  
+#  # Manager
+#  s.subspec 'Manager' do |ss|
+#    ss.source_files = 'HWMeetingSdkKit/Classes/Manager/**/*'
+#    ss.dependency 'HWMeetingSdkKit/Classes/Header/HWSDKManager.h'
+#  end
+  
+  
+  
 end

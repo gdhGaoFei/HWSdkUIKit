@@ -18,7 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = kHWSdkColor_RandomColor();
-    self.dataSource = @[@"数据", @"数据1", @"数据2", @"数据3", ];
+    NSMutableArray * arrs = [NSMutableArray arrayWithCapacity:1];
+    for (int i = 0; i<4; i++) {
+        NSString * str = [[NSDate date] stringWithFormat:@"HH:mm"];
+        [arrs addObject:str];
+    }
+    self.dataSource = [arrs copy];
     
 //    [self addRefreshHeader:^{
 //        NSLog(@"======");
