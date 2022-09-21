@@ -30,6 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
   
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 arm64' }
+  
   # mach-o 是否是静态库
   s.static_framework = true
   
