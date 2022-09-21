@@ -32,17 +32,24 @@ TODO: Add long description of the pod here.
   
   # mach-o 是否是静态库
   s.static_framework = true
-    
-  s.source_files = 'HWSdkUIKit/Classes/**/*'
   
-#  s.resource_bundles = {
-#    'HWSdkUIKit' => ['HWSdkUIKit/Assets/*.bundle']
-#  }
-#  s.resource = "HWSdkUIKit.bundle"
+  # 所有的源文件
+  s.source_files = 'HWSdkUIKit/Classes/HWSdkUIKit.h'
+  
+  # 资源文件
+  #s.resource_bundles = {
+  #  'HWSdkUIKit' => ['HWSdkUIKit/Assets/*.bundle']
+  #}
+  #s.resource = "HWSdkUIKit.bundle"
   s.resource = 'HWSdkUIKit/**/*.bundle'
 
+  # 暴露的头文件
   s.public_header_files = 'HWSdkUIKit/**/*.h'
+  
+  # 依赖系统的framework
   # s.frameworks = 'UIKit', 'MapKit'
+  
+  # 依赖一些第三方
   s.dependency "Masonry", "1.1.0"
   s.dependency "MBProgressHUD", "1.2.0"
   s.dependency "ReactiveObjC", "3.1.1"
@@ -80,7 +87,5 @@ TODO: Add long description of the pod here.
 #    ss.source_files = 'HWMeetingSdkKit/Classes/Manager/**/*'
 #    ss.dependency 'HWMeetingSdkKit/Classes/Header/HWSDKManager.h'
 #  end
-  
-  
   
 end
