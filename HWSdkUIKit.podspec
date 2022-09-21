@@ -44,8 +44,9 @@ TODO: Add long description of the pod here.
   s.resource = 'HWSdkUIKit/**/*.bundle'
 
   # 暴露的头文件
-  s.public_header_files = 'HWSdkUIKit/**/*.h'
-  
+  #s.public_header_files = 'HWSdkUIKit/**/*.h'
+  s.public_header_files = 'HWSdkUIKit/Classes/HWSdkUIKit.h'
+
   # 依赖系统的framework
   # s.frameworks = 'UIKit', 'MapKit'
   
@@ -61,24 +62,28 @@ TODO: Add long description of the pod here.
   # Macro
   s.subspec 'Macro' do |ss|
     ss.source_files = 'HWSdkUIKit/Classes/Macro/**/*.h'
+    ss.public_header_files = 'HWSdkUIKit/Classes/**/*.h'
     #ss.dependency 'HWSdkUIKit/Classes/HWSdkKit/HWSdkMacro.h'
   end
   
   # Common
   s.subspec 'Common' do |ss|
     ss.source_files = 'HWSdkUIKit/Classes/Common/**/*.{h,m}'
+    ss.public_header_files = 'HWSdkUIKit/Classes/**/*.h'
     #ss.dependency 'HWSdkUIKit/Classes/HWSdkKit/HWSdkMacro.h'
   end
   
   # HUD
   s.subspec 'HUD' do |ss|
     ss.source_files = 'HWSdkUIKit/Classes/HUD/**/*.{h,m}'
+    ss.public_header_files = 'HWSdkUIKit/Classes/**/*.h'
     s.dependency "MBProgressHUD", "1.2.0"
   end
   
   # HWSdkKit
   s.subspec 'HWSdkKit' do |ss|
     ss.source_files = 'HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}'
+    ss.public_header_files = 'HWSdkUIKit/Classes/**/*.h'
     #s.dependency "MBProgressHUD", "1.2.0"
   end
   
