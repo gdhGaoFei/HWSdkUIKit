@@ -44,8 +44,8 @@ TODO: Add long description of the pod here.
   s.resource = 'HWSdkUIKit/**/*.bundle'
 
   # 暴露的头文件
-  s.public_header_files = 'HWSdkUIKit/**/*.h'
-  # s.public_header_files = 'HWSdkUIKit/Classes/HWSdkUIKit.h'
+  #s.public_header_files = 'HWSdkUIKit/**/*.h'
+  s.public_header_files = 'HWSdkUIKit/Classes/HWSdkUIKit.h', 'HWSdkUIKit/Classes/Common/**/*.h', 'HWSdkUIKit/Classes/HWSdkKit/**/*.h'
 
   # 依赖系统的framework
   # s.frameworks = 'UIKit', 'MapKit'
