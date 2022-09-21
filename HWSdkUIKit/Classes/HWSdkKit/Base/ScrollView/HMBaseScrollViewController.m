@@ -63,6 +63,16 @@
                 UICollectionView * cv = (UICollectionView *)self.scrollView;
                 [cv reloadData];
             }
+            
+            MJRefreshComponent * header = self.scrollView.mj_header;
+            if (header != nil && header.state == MJRefreshStateRefreshing) {
+                [header endRefreshing];
+            }
+            
+            MJRefreshComponent * footer = self.scrollView.mj_footer;
+            if (footer != nil && footer.state == MJRefreshStateRefreshing) {
+                [footer endRefreshing];
+            }
         }];
     }
 }
