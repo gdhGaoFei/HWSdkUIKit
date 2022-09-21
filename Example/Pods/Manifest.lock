@@ -5,15 +5,8 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - HWSdkUIKit (0.1.2):
-    - HWSdkUIKit/Common (= 0.1.2)
     - HWSdkUIKit/HUD (= 0.1.2)
     - HWSdkUIKit/Macro (= 0.1.2)
-    - Masonry (= 1.1.0)
-    - MBProgressHUD (= 1.2.0)
-    - MJRefresh (= 3.7.5)
-    - ReactiveObjC (= 3.1.1)
-    - YYCategories (= 1.0.4)
-  - HWSdkUIKit/Common (0.1.2):
     - Masonry (= 1.1.0)
     - MBProgressHUD (= 1.2.0)
     - MJRefresh (= 3.7.5)
@@ -63,7 +56,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  HWSdkUIKit: aaba05ab88f824837088f185412b430722d93134
+  HWSdkUIKit: eda2e9cee7cf9fccb0fc9baa4a998f701eaeeef1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961

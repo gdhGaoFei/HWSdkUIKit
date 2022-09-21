@@ -24,12 +24,14 @@
   "static_framework": true,
   "source_files": [
     "HWSdkUIKit/Classes/HWSdkUIKit.h",
-    "HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}"
+    "HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}",
+    "HWSdkUIKit/Classes/Common/*.{h,m}"
   ],
   "resources": "HWSdkUIKit/**/*.bundle",
   "public_header_files": [
     "HWSdkUIKit/Classes/HWSdkUIKit.h",
-    "HWSdkUIKit/Classes/HWSdkKit/**/*.h"
+    "HWSdkUIKit/Classes/HWSdkKit/**/*.h",
+    "HWSdkUIKit/Classes/Common/*.h"
   ],
   "dependencies": {
     "Masonry": [
@@ -53,11 +55,6 @@
       "name": "Macro",
       "source_files": "HWSdkUIKit/Classes/Macro/**/*.h",
       "public_header_files": "HWSdkUIKit/Classes/**/*.h"
-    },
-    {
-      "name": "Common",
-      "source_files": "HWSdkUIKit/Classes/Common/*.{h,m}",
-      "public_header_files": "HWSdkUIKit/Classes/Common/*.h"
     },
     {
       "name": "HUD",
