@@ -19,9 +19,13 @@
     "ios": "9.0"
   },
   "static_framework": true,
-  "source_files": "HWSdkUIKit/Classes/HWSdkUIKit.h",
+  "source_files": [
+    "HWSdkUIKit/Classes/HWSdkUIKit.h",
+    "HWSdkUIKit/Classes/Common/**/*.{h,m}",
+    "HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}"
+  ],
   "resources": "HWSdkUIKit/**/*.bundle",
-  "public_header_files": "HWSdkUIKit/Classes/HWSdkUIKit.h",
+  "public_header_files": "HWSdkUIKit/**/*.h",
   "dependencies": {
     "Masonry": [
       "1.1.0"
@@ -46,19 +50,14 @@
       "public_header_files": "HWSdkUIKit/Classes/**/*.h"
     },
     {
-      "name": "Common",
-      "source_files": "HWSdkUIKit/Classes/Common/**/*.{h,m}",
-      "public_header_files": "HWSdkUIKit/Classes/**/*.h"
-    },
-    {
       "name": "HUD",
       "source_files": "HWSdkUIKit/Classes/HUD/**/*.{h,m}",
-      "public_header_files": "HWSdkUIKit/Classes/**/*.h"
-    },
-    {
-      "name": "HWSdkKit",
-      "source_files": "HWSdkUIKit/Classes/HWSdkKit/**/*.{h,m}",
-      "public_header_files": "HWSdkUIKit/Classes/**/*.h"
+      "public_header_files": "HWSdkUIKit/Classes/**/*.h",
+      "dependencies": {
+        "MBProgressHUD": [
+          "1.2.0"
+        ]
+      }
     }
   ]
 }
